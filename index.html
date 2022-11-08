@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário Copa</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+
+<body id="yellow" class="theme">
+    <div id="app">
+        <header><img src="./assets/logo.svg" alt="">
+            <button onclick="changeTheme()">Mudar tema</button>
+        </header>
+        <main id="cards"></main>
+    </div>
+
+    <div class="color-switcher">
+        <div class="switcher-btn">
+            <!-- <i class="bx bxs-cog"></i> -->
+        </div>
+
+        <div class="theme-buttons-container">
+            <span class="theme-buttons t-yellow" data-color="#f7dd43" style="background: #f7dd43"></span>
+            <span class="theme-buttons t-blue" data-color="#33baf3" style="background: #33baf3"></span>
+            <span class="theme-buttons t-green" data-color="#047c3f" style="background: #047c3f"></span>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="footer-name">José Pinheiro</div>
+
+        <div class="footer-social">
+
+            <a target="_blank" href="https://github.com/psousaj"><i class="fa-brands fa-github"></i>
+
+                <a target="_blank" href="https://www.instagram.com/jp_filho_/"><i class="fa-brands fa-instagram"></i>
+
+                    <a target="_blank" href="https://www.linkedin.com/in/psousaj"><i class="fa-brands fa-linkedin"></i>
+
+        </div>
+
+    </footer>
+
+    <script src="https://kit.fontawesome.com/826bceb3fa.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

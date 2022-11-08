@@ -1,0 +1,66 @@
+function createGame(player1, hour, player2) {
+  return `
+    <li>
+      <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}">
+      <strong>${hour}</strong>
+      <img src="./assets/icon-${player2}.svg" alt="Bandeira da ${player2}">
+    </li>
+  `
+}
+
+let delay = -0.4
+function createCard(date, day, games) {
+  delay = delay + 0.4
+  return `
+     <div class="card" style="animation-delay: ${delay}s">
+                <h2>${date} <span>${day}</span></h2>
+                <ul>
+                   ${games}
+                </ul>
+            </div>
+  `
+}
+
+document.querySelector("#cards").innerHTML =
+  createCard(
+    "24/11",
+    "quinta",
+    createGame("switzerland", "07:00", "cameron") +
+      createGame("uruguay", "10:00", "south korea") +
+      createGame("portugal", "13:00", "ghana") +
+      createGame("brazil", "16:00", "serbia")
+  ) +
+  createCard(
+    "28/11",
+    "segunda",
+    createGame("cameron", "07:00", "serbia") +
+      createGame("south korea", "10:00", "ghana") +
+      createGame("brazil", "13:00", "switzerland") +
+      createGame("portugal", "16:00", "uruguay")
+  ) +
+  createCard(
+    "12/12",
+    "segunda",
+    createGame("south korea", "07:00", "portugal") +
+      createGame("ghana", "10:00", "uruguay") +
+      createGame("serbia", "13:00", "switzerland") +
+      createGame("cameron", "16:00", "brazil")
+  )
+
+const newLocal = (document.querySelector(".t-blue").onclick = () => {
+  document.body.classList.toggle("c-blue")
+  document.body.classList.remove("c-green", "c-yellow")
+})
+
+themeChange()
+function themeChange() {
+  document.querySelector(".t-green").onclick = () => {
+    document.body.classList.toggle("c-green")
+    document.body.classList.remove("c-blue", "c-yellow")
+  }
+
+  document.querySelector(".t-yellow").onclick = () => {
+    document.body.classList.toggle("c-yellow")
+    document.body.classList.remove("c-green", "c-blue")
+  }
+}
