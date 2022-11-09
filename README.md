@@ -18,7 +18,7 @@ Calendário dos jogos da Copa do Mundo de 2022.
 <br>
 
 <p align="center">
-  <img alt="calendário da copa" src=".github/preview.jpg" width="100%">
+  <img alt="calendário da copa" src=".github/workflow/preview.jpg" width="100%">
 </p>
 
 
