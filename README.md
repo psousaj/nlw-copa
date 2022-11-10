@@ -6,7 +6,6 @@ Calendário dos jogos da Copa do Mundo de 2022.
 
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
@@ -76,7 +75,7 @@ Podemos executar diretamente no Navegador
 
 - Controle de versão
     
-    Histórico do projeto
+- Histórico do projeto
     
 - Linha do tempo
 
