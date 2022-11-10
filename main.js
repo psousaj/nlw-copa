@@ -1,4 +1,4 @@
-function createGame(player1, hour, player2) {
+const createGame = function createGame(player1, hour, player2) {
   return `
     <li>
       <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}">
@@ -6,10 +6,10 @@ function createGame(player1, hour, player2) {
       <img src="./assets/icon-${player2}.svg" alt="Bandeira da ${player2}">
     </li>
   `
-}
+};
 
 let delay = -0.4
-function createCard(date, day, games) {
+const createCard = function createCard(date, day, games) {
   delay = delay + 0.4
   return `
      <div class="card" style="animation-delay: ${delay}s">
@@ -19,7 +19,7 @@ function createCard(date, day, games) {
                 </ul>
             </div>
   `
-}
+};
 
 document.querySelector("#cards").innerHTML =
   createCard(
