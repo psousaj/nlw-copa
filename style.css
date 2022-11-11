@@ -216,7 +216,7 @@ header {
 
 @media (min-width: 700px) {
   #cards {
-    max-width: 850px;
+    max-width: 980px;
     flex-direction: row;
     flex-wrap: wrap;
   }
