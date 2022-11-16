@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este app mostra todos os jogos da copa do mundo 2022" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>NLW</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>Copa do Mundo - Qatar | Calendário</title>
 </head>
 
 <body>
@@ -29,11 +32,16 @@
         </main>
     </div>
 
-    <div class="theme-buttons-container">
-        <span class="theme-buttons t-yellow" data-color="#f7dd43"></span>
-        <span class="theme-buttons t-blue" data-color="#33baf3"></span>
-        <span class="theme-buttons t-green" data-color="#047c3f"></span>
-    </div>
+    <div class="color-switcher">
+        <div class="switcher-btn">
+            <!-- <i class="bx bxs-cog"></i> -->
+        </div>
+
+        <div class="theme-buttons-container">
+            <span class="theme-buttons yellow" data-color="#f7dd43" style="background: #f7dd43"></span>
+            <span class="theme-buttons blue" data-color="#33baf3" style="background: #33baf3"></span>
+            <span class="theme-buttons green" data-color="#047c3f" style="background: #047c3f"></span>
+        </div>
     </div>
 
     <footer>
@@ -53,7 +61,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/826bceb3fa.js" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

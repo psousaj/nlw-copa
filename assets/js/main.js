@@ -7,14 +7,14 @@ c(".active").classList.remove("active")
 const createGame = function createGame(player1, hour, player2) {
   return `
     <li>
-      <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}">
+      <img src="./assets/images/selecoes/icon-${player1}.svg" alt="Bandeira do ${player1}">
       <strong>${hour}</strong>
-      <img src="./assets/icon-${player2}.svg" alt="Bandeira da ${player2}">
+      <img src="./assets/images/selecoes/icon-${player2}.svg" alt="Bandeira da ${player2}">
     </li>
   `
 }
 
-let delay = -0.4
+var delay = -0.2
 const createCard = function createCard(date, day, games, rodada) {
   delay = delay + 0.4
   return `
@@ -56,8 +56,7 @@ document.querySelector("#cards").innerHTML = document.querySelector(
 let grupoA = document.querySelector("#GrupoA")
 
 grupoA.addEventListener("click", () => {
-  let delay = -0.4
-
+  delay = -0.2
   document.querySelector("#cards").innerHTML =
     createCard(
       "20/11",
@@ -89,35 +88,33 @@ grupoA.addEventListener("click", () => {
 
 let grupoB = document.querySelector("#GrupoB")
 grupoB.addEventListener("click", () => {
-  let delay = -0.4
-
+  delay = -0.2
   document.querySelector("#cards").innerHTML =
     createCard(
       "21/11",
       "sabado",
       createGame("england", "10:00", "iran") +
-        createGame("usa", "16:00", "wales"),
+        createGame("united states", "16:00", "wales"),
       "1ª Rodada"
     ) +
     createCard(
       "25/11",
       "sexta",
       createGame("wales", "07:00", "iran") +
-        createGame("england", "16:00", "usa"),
+        createGame("england", "16:00", "united states"),
       "2ª Rodada"
     ) +
     createCard(
       "29/11",
       "terça",
-      createGame("iran", "16:00", "usa") +
+      createGame("iran", "16:00", "united states") +
         createGame("wales", "16:00", "england"),
       "3ª Rodada"
     )
 })
 let grupoC = document.querySelector("#GrupoC")
 grupoC.addEventListener("click", () => {
-  let delay = -0.4
-
+  delay = -0.2
   document.querySelector("#cards").innerHTML =
     createCard(
       "22/11",
@@ -143,8 +140,7 @@ grupoC.addEventListener("click", () => {
 })
 let grupoD = document.querySelector("#GrupoD")
 grupoD.addEventListener("click", () => {
-  let delay = -0.4
-
+  delay = -0.2
   document.querySelector("#cards").innerHTML =
     createCard(
       "22/11",
@@ -170,8 +166,7 @@ grupoD.addEventListener("click", () => {
 })
 let grupoE = document.querySelector("#GrupoE")
 grupoE.addEventListener("click", () => {
-  let delay = -0.4
-
+  delay = -0.2
   document.querySelector("#cards").innerHTML =
     createCard(
       "22/11",
@@ -197,8 +192,7 @@ grupoE.addEventListener("click", () => {
 })
 let grupoF = document.querySelector("#GrupoF")
 grupoF.addEventListener("click", () => {
-  let delay = -0.4
-
+  delay = -0.2
   document.querySelector("#cards").innerHTML =
     createCard(
       "23/11",
@@ -224,8 +218,7 @@ grupoF.addEventListener("click", () => {
 })
 let grupoG = document.querySelector("#GrupoG")
 grupoG.addEventListener("click", () => {
-  let delay = -0.4
-
+  delay = -0.2
   document.querySelector("#cards").innerHTML =
     createCard(
       "24/11",
@@ -251,8 +244,7 @@ grupoG.addEventListener("click", () => {
 })
 let grupoH = document.querySelector("#GrupoH")
 grupoH.addEventListener("click", () => {
-  let delay = -0.4
-
+  delay = -0.2
   document.querySelector("#cards").innerHTML =
     createCard(
       "24/11",
