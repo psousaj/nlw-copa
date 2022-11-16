@@ -44,14 +44,8 @@ body {
   background-color: #121214;
 
   height: calc(100vh - 100px);
-<<<<<<< HEAD
   background-position-y: -582px;
   background: var(--bg) repeat top center/cover;
-=======
-
-  background: var(--bg) no-repeat top center/cover;
-  background-size: fit-content;
->>>>>>> 11ed2fc997d726725231e5267f73532a02d1569f
 }
 
 body * {
