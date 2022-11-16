@@ -12,7 +12,7 @@
   --bg: url(/assets/bg-yellow.svg);
 }
 
-body.c-blue {
+body.blue {
   --card-title-border-color: #33baf3;
   --card-color-primary: #33baf3;
   --card-border-color: #33baf3;
@@ -20,16 +20,16 @@ body.c-blue {
   --bg: url("/assets/bg-blue.svg");
 }
 
-body.c-green {
-   --card-title-border-color: #047c3f;
+body.green {
+  --card-title-border-color: #047c3f;
   --card-color-primary: #047c3f;
   --card-border-color: #047c3f;
   --card-bg-color: #1a1f1b;
   --bg: url("/assets/bg-green.svg");
 }
 
-body.c-yellow {
-   --card-title-border-color: #f7dd43;
+body.yellow {
+  --card-title-border-color: #f7dd43;
   --card-color-primary: #f7dd43;
   --card-border-color: #746615;
   --card-bg-color: #1d1c19;
@@ -41,7 +41,11 @@ ul {
 }
 
 body {
-  background: #121214;
+  background-color: #121214;
+  /* background-position-y: -582px; */
+
+  height: calc(100vh - 100px);
+
   background-image: var(--bg) no-repeat top center/cover;
 }
 
@@ -53,6 +57,13 @@ body * {
   width: fit-content;
   margin: auto;
   padding-top: 52px;
+}
+
+.card h4 {
+  margin-bottom: 33px;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
 .color-switcher {
@@ -103,7 +114,7 @@ body * {
 
 @keyframes rotate {
   0% {
-  transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
@@ -204,6 +215,35 @@ header {
   animation: appear 0.2s forwards;
 }
 
+#menu {
+  background-color: var(--card-bg-color);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--card-color-primary);
+  flex-wrap: wrap;
+}
+
+#menu a {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#menu a:hover {
+  background-color: white;
+  border-radius: 5px;
+  color: #261118;
+}
+
+.active {
+  background-color: white;
+  border-radius: 5px;
+  color: #261118 !important;
+}
+
 @keyframes appear {
   0% {
     transform: translateY(-50px);
@@ -255,7 +295,6 @@ footer {
 }
 
 @media (max-width: 350px) {
- 
   header {
     margin-bottom: 23px;
     gap: 2px;
@@ -268,11 +307,11 @@ footer {
     /* margin: 0 auto; */
   }
 
-  #cards{
+  #cards {
     justify-content: center;
     align-items: center;
     width: 240;
-    transform: scale(.7);
+    transform: scale(0.7);
     margin-right: 2px;
     margin-left: 2px;
   }
@@ -282,7 +321,7 @@ footer {
     padding: 15px;
   }
 
-  .card ul li{
+  .card ul li {
     width: var(--largura);
     justify-content: center;
     align-items: center;
@@ -290,16 +329,17 @@ footer {
     padding: 0;
   }
 
-  .card ul li img, .card ul li strong {
+  .card ul li img,
+  .card ul li strong {
     transform: scale(0.8);
   }
 
-  .footer-social{
+  .footer-social {
     display: flex;
   }
 
-  .footer-social i{
-    transform: scale(.7);
+  .footer-social i {
+    transform: scale(0.7);
     justify-content: center;
     flex-wrap: wrap;
   }
