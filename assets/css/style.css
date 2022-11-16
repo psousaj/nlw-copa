@@ -46,7 +46,8 @@ body {
 
   height: calc(100vh - 100px);
 
-  background: var(--bg) repeat top center/cover;
+  background: var(--bg) no-repeat top center/cover;
+  background-size: fit-content;
 }
 
 body * {
