@@ -28,7 +28,7 @@ const createCard = function createCard(date, day, games, rodada) {
   `
 }
 
-document.querySelector("#cards").innerHTML = document.querySelector(
+const execute = document.querySelector("#cards").innerHTML = document.querySelector(
   "#cards"
 ).innerHTML =
   createCard(
@@ -57,7 +57,7 @@ let grupoA = document.querySelector("#GrupoA")
 
 grupoA.addEventListener("click", () => {
   delay = -0.2
-  document.querySelector("#cards").innerHTML =
+  const execute = document.querySelector("#cards").innerHTML =
     createCard(
       "20/11",
       "domingo",
@@ -89,7 +89,7 @@ grupoA.addEventListener("click", () => {
 let grupoB = document.querySelector("#GrupoB")
 grupoB.addEventListener("click", () => {
   delay = -0.2
-  document.querySelector("#cards").innerHTML =
+  const execute = document.querySelector("#cards").innerHTML =
     createCard(
       "21/11",
       "segunda",
@@ -116,7 +116,7 @@ grupoB.addEventListener("click", () => {
 let grupoC = document.querySelector("#GrupoC")
 grupoC.addEventListener("click", () => {
   delay = -0.2
-  document.querySelector("#cards").innerHTML =
+  const execute = document.querySelector("#cards").innerHTML =
     createCard(
       "24/11",
       "quinta",
@@ -142,7 +142,7 @@ grupoC.addEventListener("click", () => {
 let grupoD = document.querySelector("#GrupoD")
 grupoD.addEventListener("click", () => {
   delay = -0.2
-  document.querySelector("#cards").innerHTML =
+  const execute = document.querySelector("#cards").innerHTML =
     createCard(
       "22/11",
       "terça",
@@ -168,7 +168,7 @@ grupoD.addEventListener("click", () => {
 let grupoE = document.querySelector("#GrupoE")
 grupoE.addEventListener("click", () => {
   delay = -0.2
-  document.querySelector("#cards").innerHTML =
+  const execute = document.querySelector("#cards").innerHTML =
     createCard(
       "23/11",
       "quarta",
@@ -194,7 +194,7 @@ grupoE.addEventListener("click", () => {
 let grupoF = document.querySelector("#GrupoF")
 grupoF.addEventListener("click", () => {
   delay = -0.2
-  document.querySelector("#cards").innerHTML =
+  const execute = document.querySelector("#cards").innerHTML =
     createCard(
       "23/11",
       "quarta",
@@ -220,7 +220,7 @@ grupoF.addEventListener("click", () => {
 let grupoG = document.querySelector("#GrupoG")
 grupoG.addEventListener("click", () => {
   delay = -0.2
-  document.querySelector("#cards").innerHTML =
+  const execute = document.querySelector("#cards").innerHTML =
     createCard(
       "24/11",
       "quinta",
@@ -246,7 +246,7 @@ grupoG.addEventListener("click", () => {
 let grupoH = document.querySelector("#GrupoH")
 grupoH.addEventListener("click", () => {
   delay = -0.2
-  document.querySelector("#cards").innerHTML =
+  const execute = document.querySelector("#cards").innerHTML =
     createCard(
       "24/11",
       "QUINTA",
