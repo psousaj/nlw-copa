@@ -302,12 +302,12 @@ footer {
   }
 }
 
-@media (min-width: 800px) and (max-width: 1000px) {
+@media (min-width: 670px) and (max-width: 1000px) {
   #app {
     max-width: 1000px;
   }
   #cards{
-    max-width: fit-content;
+    max-width: 750px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
