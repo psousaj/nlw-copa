@@ -4,12 +4,30 @@ let bg = document.querySelector("body")
 
 c(".active").classList.remove("active")
 
-const createGame = function createGame(player1, hour, player2) {
+const createGame = function createGame(
+  player1,
+  hour,
+  player2,
+  result1,
+  result2
+) {
+  if (result1 === undefined || result2 === undefined) {
+    result1 = "-"
+    result2 = "-"
+  }
   return `
     <li>
-      <img src="./assets/images/selecoes/icon-${player1}.svg" alt="Bandeira do ${player1}">
-      <strong>${hour}</strong>
-      <img src="./assets/images/selecoes/icon-${player2}.svg" alt="Bandeira da ${player2}">
+      <a class="image">
+        <img src="./assets/images/selecoes/icon-${player1}.svg" alt="Bandeira do ${player1}">
+        <span class="info">${player1}</span>
+      </a>
+        <div class="result"><h4>${result1}</h4></div>
+        <strong>${hour}</strong>
+        <div class="result"><h4>${result2}</h4></div>
+      <a class="image">
+        <img src="./assets/images/selecoes/icon-${player2}.svg" alt="Bandeira da ${player2}">
+        <span class="info">${player2}</span>
+      </a>
     </li>
   `
 }
@@ -28,46 +46,49 @@ const createCard = function createCard(date, day, games, rodada) {
   `
 }
 
-const execute = document.querySelector("#cards").innerHTML = document.querySelector(
-  "#cards"
-).innerHTML =
-  createCard(
-    "24/11",
-    "QUINTA",
-    createGame("brazil", "07:00", "cameroon") +
-      createGame("serbia", "16:00", "switzerland"),
-    "1ª Rodada"
-  ) +
-  createCard(
-    "28/11",
-    "segunda",
-    createGame("cameroon", "07:00", "serbia") +
-      createGame("brazil", "13:00", "switzerland"),
-    "2ª Rodada"
-  ) +
-  createCard(
-    "02/12",
-    "sexta",
-    createGame("cameroon", "16:00", "brazil") +
-      createGame("serbia", "16:00", "switzerland"),
-    "3ª Rodada"
-  )
+var execute =
+  (document.querySelector("#cards").innerHTML =
+  document.querySelector("#cards").innerHTML =
+    createCard(
+      "24/11",
+      "QUINTA",
+      createGame("brazil", "07:00", "cameroon") +
+        createGame("serbia", "16:00", "switzerland"),
+      "1ª Rodada"
+    ) +
+    createCard(
+      "28/11",
+      "segunda",
+      createGame("cameroon", "07:00", "serbia") +
+        createGame("brazil", "13:00", "switzerland"),
+      "2ª Rodada"
+    ) +
+    createCard(
+      "02/12",
+      "sexta",
+      createGame("cameroon", "16:00", "brazil") +
+        createGame("serbia", "16:00", "switzerland"),
+      "3ª Rodada"
+    ))
 
 let grupoA = document.querySelector("#GrupoA")
 
 grupoA.addEventListener("click", () => {
+  // document.querySelector("#GrupoA").onclick = () => {
+  //   document.body.classList.toggle("isActive")
+  // }
   delay = -0.2
-  const execute = document.querySelector("#cards").innerHTML =
+  execute = document.querySelector("#cards").innerHTML =
     createCard(
       "20/11",
       "domingo",
-      createGame("qatar", "13:00", "ecuador"),
+      createGame("qatar", "13:00", "ecuador", 0, 2),
       "1ª Rodada"
     ) +
     createCard(
       "21/11",
       "segunda",
-      createGame("senegal", "13:00", "netherlands"),
+      createGame("senegal", "13:00", "netherlands", 0, 2),
       "1ª Rodada"
     ) +
     createCard(
@@ -89,13 +110,12 @@ grupoA.addEventListener("click", () => {
 let grupoB = document.querySelector("#GrupoB")
 grupoB.addEventListener("click", () => {
   delay = -0.2
-  const execute = document.querySelector("#cards").innerHTML =
+  execute = document.querySelector("#cards").innerHTML =
     createCard(
       "21/11",
       "segunda",
-      createGame("england", "10:00", "iran") +
-        createGame("united states", "16:00", "wales")+
-          createGame('united states', '16:00', 'wales'),
+      createGame("england", "10:00", "iran", 6, 2) +
+        createGame("united states", "16:00", "wales", 1, 1),
       "1ª Rodada"
     ) +
     createCard(
@@ -116,38 +136,38 @@ grupoB.addEventListener("click", () => {
 let grupoC = document.querySelector("#GrupoC")
 grupoC.addEventListener("click", () => {
   delay = -0.2
-  const execute = document.querySelector("#cards").innerHTML =
+  execute = document.querySelector("#cards").innerHTML =
     createCard(
-      "24/11",
-      "quinta",
-      createGame("switzerland", "07:00", "cameroon") +
-        createGame("serbia", "16:00", "brazil"),
+      "22/11",
+      "terça",
+      createGame("argentina", "07:00", "saudi arabia", 1, 2) +
+        createGame("mexico", "13:00", "poland", 0, 0),
       "1ª Rodada"
     ) +
     createCard(
-      "28/11",
-      "segunda",
-      createGame("cameroon", "07:00", "serbia") +
-        createGame("brazil", "13:00", "switzerland"),
+      "26/11",
+      "sabado",
+      createGame("poland", "10:00", "saudi arabia") +
+        createGame("argentina", "16:00", "mexico"),
       "2ª Rodada"
     ) +
     createCard(
-      "02/12",
-      "sexta",
-      createGame("cameroon", "16:00", "brazil") +
-        createGame("serbia", "16:00", "switzerland"),
+      "30/11",
+      "quarta",
+      createGame("poland", "16:00", "argentina") +
+        createGame("saudi arabia", "16:00", "mexico"),
       "3ª Rodada"
     )
 })
 let grupoD = document.querySelector("#GrupoD")
 grupoD.addEventListener("click", () => {
   delay = -0.2
-  const execute = document.querySelector("#cards").innerHTML =
+  execute = document.querySelector("#cards").innerHTML =
     createCard(
       "22/11",
       "terça",
-      createGame("denmark", "10:00", "tunisia") +
-        createGame("france", "16:00", "australia"),
+      createGame("denmark", "10:00", "tunisia", 0, 0) +
+        createGame("france", "16:00", "australia", 4, 1),
       "1ª Rodada"
     ) +
     createCard(
@@ -168,12 +188,12 @@ grupoD.addEventListener("click", () => {
 let grupoE = document.querySelector("#GrupoE")
 grupoE.addEventListener("click", () => {
   delay = -0.2
-  const execute = document.querySelector("#cards").innerHTML =
+  execute = document.querySelector("#cards").innerHTML =
     createCard(
       "23/11",
       "quarta",
-      createGame("germany", "10:00", "japan") +
-        createGame("spain", "13:00", "costa rica"),
+      createGame("germany", "10:00", "japan", 1, 2) +
+        createGame("spain", "13:00", "costa rica", 7, 0),
       "1ª Rodada"
     ) +
     createCard(
@@ -194,12 +214,12 @@ grupoE.addEventListener("click", () => {
 let grupoF = document.querySelector("#GrupoF")
 grupoF.addEventListener("click", () => {
   delay = -0.2
-  const execute = document.querySelector("#cards").innerHTML =
+  execute = document.querySelector("#cards").innerHTML =
     createCard(
       "23/11",
       "quarta",
-      createGame("morocco", "07:00", "croatia") +
-        createGame("belgium", "16:00", "canada"),
+      createGame("morocco", "07:00", "croatia", 0, 0) +
+        createGame("belgium", "16:00", "canada", 1, 0),
       "1ª Rodada"
     ) +
     createCard(
@@ -220,7 +240,7 @@ grupoF.addEventListener("click", () => {
 let grupoG = document.querySelector("#GrupoG")
 grupoG.addEventListener("click", () => {
   delay = -0.2
-  const execute = document.querySelector("#cards").innerHTML =
+  execute = document.querySelector("#cards").innerHTML =
     createCard(
       "24/11",
       "quinta",
@@ -246,7 +266,7 @@ grupoG.addEventListener("click", () => {
 let grupoH = document.querySelector("#GrupoH")
 grupoH.addEventListener("click", () => {
   delay = -0.2
-  const execute = document.querySelector("#cards").innerHTML =
+  execute = document.querySelector("#cards").innerHTML =
     createCard(
       "24/11",
       "QUINTA",
@@ -287,3 +307,46 @@ function themeChange() {
     document.body.classList.remove("green", "blue")
   }
 }
+
+// ================ particles ================
+
+window.onload = function () {
+  Particles.init({
+    selector: ".background",
+    sizeVariations: "4",
+    color: ["#48F2E3", "#2c3e50", "#95a5a6", "#7f8c8d"],
+    connectParticles: true,
+    minDistance: 150,
+    speed: 0.7,
+  })
+}
+Particles.init({
+  // normal options
+  selector: ".background",
+  maxParticles: 450,
+  // options for breakpoints
+  responsive: [
+    {
+      breakpoint: 768,
+      options: {
+        maxParticles: 200,
+        connectParticles: true,
+      },
+    },
+    {
+      breakpoint: 425,
+      options: {
+        maxParticles: 100,
+        connectParticles: true,
+      },
+    },
+    {
+      breakpoint: 320,
+      options: {
+        maxParticles: 30,
+
+        // disables particles.js
+      },
+    },
+  ],
+})

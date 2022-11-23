@@ -6,10 +6,11 @@
 
 :root {
   --largura: 220px;
-  --card-title-border-color: #746615;
-  --card-color-primary: #f7dd43;
-  --card-bg-color: #1d1c19;
-  --bg: url("./assets/images/bg-yellow.svg");
+  --card-title-border-color: #33baf3;
+  --card-color-primary: #33baf3;
+  --card-border-color: #33baf3;
+  --card-bg-color: #202024;
+  --bg: url("/assets/images/bg-blue.svg");
 }
 
 body.blue {
@@ -17,7 +18,7 @@ body.blue {
   --card-color-primary: #33baf3;
   --card-border-color: #33baf3;
   --card-bg-color: #202024;
-  --bg: url("./assets/images/bg-blue.svg");
+  --bg: url("/assets/images/bg-blue.svg");
 }
 
 body.green {
@@ -40,18 +41,30 @@ ul {
   list-style: none;
 }
 
+.background {
+  position: fixed;
+
+  display: block;
+
+  top: 0;
+
+  left: 0;
+
+  z-index: -1;
+
+  height: 100%;
+  width: 100%;
+
+  background: var(--bg);
+}
+
 body {
   background-color: #121214;
 
   height: calc(100vh - 100px);
-<<<<<<< HEAD
-  background-position-y: -582px;
-  background: var(--bg) repeat top center/cover;
-=======
 
   background: var(--bg) no-repeat top center/cover;
   background-size: fit-content;
->>>>>>> 11ed2fc997d726725231e5267f73532a02d1569f
 }
 
 body * {
@@ -151,6 +164,60 @@ header {
   background: var(--card-bg-color);
   border-bottom: 2px solid var(--card-color-primary);
   border-radius: 6px;
+
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+
+.card li {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+}
+.result {
+  text-align: justify;
+}
+
+.card img {
+  cursor: pointer;
+}
+
+.card .image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.box-info {
+  width: fit-content;
+  background-color: red;
+}
+
+.info {
+  margin-top: 25px;
+  position: absolute;
+  width: fit-content;
+  /* bottom: -30%; */
+  opacity: 0;
+  height: 5px;
+  background-color: #202020;
+  border-radius: 5%;
+  color: #fff;
+
+  /* -webkit-transition: all 0.3s ease-in-out; */
+  /*-moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
+}
+
+.image:hover .info {
+  opacity: 1;
+  /* bottom: block; */
+  /* text-align: inline; */
+  margin: 0 auto;
+  /* display: block; */
 }
 
 .card h2 {
@@ -236,7 +303,6 @@ header .unica a {
   text-decoration: none;
 }
 
-
 #menu a {
   color: white;
   padding: 10px;
@@ -248,7 +314,11 @@ header .unica a {
   background-color: white;
   border-radius: 5px;
   color: #261118;
-  box-shadow: 1px #202020
+  box-shadow: 1px #202020;
+}
+
+.isActive {
+  background-color: #d8d8da !important;
 }
 
 .active {
@@ -306,14 +376,17 @@ footer {
   #app {
     max-width: 1000px;
   }
-  #cards{
+  #cards {
     max-width: 750px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
   }
-  .card{
+  .card {
     justify-content: space-evenly;
+  }
+  footer {
+    margin: 1rem 0;
   }
 }
 
@@ -366,55 +439,92 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  footer {
+    margin: 1rem 0;
+  }
 }
 
-@media (min-width: 350px) and (max-width:800px) {
-  #main{
+@media (min-width: 350px) and (max-width: 800px) {
+  #main {
     display: flex;
   }
 
-  #cards{
+  #cards {
     max-width: fit-content;
     margin: auto;
     justify-content: center;
   }
-  .card{
+  .card {
     transform: scale(0.8);
   }
+
+  footer {
+    margin: 1rem 0;
+  }
 }
 
-@media(max-width: 700px) and (min-width: 350px){
-  #main{
+@media (max-width: 700px) and (min-width: 350px) {
+  #main {
     display: flex;
   }
 
-  #cards{
-    transform: scale(0.9); 
-    max-width: fit-content; 
+  #cards {
+    transform: scale(0.9);
+    max-width: fit-content;
     margin: 0;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .card{
+  .card {
     transform: scale(0.9);
   }
+
+  footer {
+    margin: 1rem 0;
+  }
 }
 
-@media(max-width: 350px){
-  #main{
+@media (max-width: 350px) {
+  #main {
     display: flex;
   }
 
-  #cards{
-    transform: scale(0.7); 
-    max-width: fit-content; 
+  #cards {
+    transform: scale(0.7);
+    max-width: fit-content;
     margin: 0;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .card{
+  .card {
     transform: scale(0.7);
   }
+
+  footer {
+    margin: 1rem 0;
+  }
+}
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000 var(--card-border-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #202020;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--card-border-color);
+  border-radius: 20px;
+  border: 2px solid var(--card-border-color);
 }
