@@ -190,9 +190,18 @@ header {
   align-items: center;
 }
 
-.box-info {
-  width: fit-content;
-  background-color: red;
+/* .result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+} */
+.result h4 {
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+  font-size: 20px;
+  color: #12b664;
 }
 
 .info {
