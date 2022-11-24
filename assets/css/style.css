@@ -200,21 +200,22 @@ header {
   justify-content: center;
   align-items: center;
   margin: auto 0;
-  font-size: 20px;
-  color: #12b664;
+  color: #1cd378;
+  font-size: 25px;
+  bottom: -50%;
 }
 
 .info {
   margin-top: 25px;
   position: absolute;
   width: fit-content;
-  /* bottom: -30%; */
   opacity: 0;
   height: 5px;
   background-color: #202020;
   border-radius: 5%;
-  color: #fff;
-
+  color: #f7dd43;
+  font-weight: bold;
+  text-transform: uppercase;
   /* -webkit-transition: all 0.3s ease-in-out; */
   /*-moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
